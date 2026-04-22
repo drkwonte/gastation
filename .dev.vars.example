@@ -1,0 +1,10 @@
+## Cloudflare (wrangler) local dev vars
+# Copy to ".dev.vars" and fill in secrets. Do NOT commit ".dev.vars".
+
+# Opinet free API key
+OPINET_API_KEY=
+
+# Kakao Maps JavaScript key (this is public in frontend, but keep it here for convenience during dev)
+# You still need to set VITE_KAKAO_MAPS_APP_KEY in .env.local for the Vite dev server.
+KAKAO_MAPS_APP_KEY=
+

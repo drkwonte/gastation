@@ -1,0 +1,57 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+  background: var(--bg-primary);
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.lead {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.section {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+}
+
+.section h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.section p {
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.section ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  line-height: 2;
+}
+
+.section li {
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.section code {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+

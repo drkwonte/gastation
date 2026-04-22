@@ -1,0 +1,1 @@
+{"ok":true,"status":200,"requested":{"x":"211131.99999999974","y":"431276","radius":2000,"prodcd":"B027","sort":"1"},"upstream":{"url":"https://www.opinet.co.kr/api/aroundAll.do"},"data":{"RESULT":{"OIL":[]}},"stations":[],"raw":null}
