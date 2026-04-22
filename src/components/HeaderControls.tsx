@@ -2,20 +2,7 @@ import type { ProductCode } from '../types/opinet'
 import { PRODUCT_OPTIONS, RADIUS_OPTIONS_METERS } from '../env'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
-
-const LABEL_CLASS_NAME = 'text-xs font-semibold text-slate-600 dark:text-slate-300'
-const SELECT_BASE_CLASS =
-  'h-10 w-full rounded-xl border px-3 text-sm font-semibold ' +
-  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/35 focus-visible:ring-offset-2'
-
-function getSelectStyle() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark'
-  return {
-    backgroundColor: isDark ? '#334155' : 'white',
-    borderColor: isDark ? '#475569' : '#e2e8f0',
-    color: isDark ? '#f1f5f9' : '#0f172a',
-  }
-}
+import styles from './HeaderControls.module.css'
 
 export function HeaderControls(props: {
   placeQuery: string
@@ -34,7 +21,7 @@ export function HeaderControls(props: {
   return (
     <div className="grid gap-4">
       <div className="grid gap-2">
-        <div className={LABEL_CLASS_NAME}>지역 검색</div>
+        <div className={styles.label}>지역 검색</div>
         <div className="grid grid-cols-[1fr_76px] gap-2 items-center">
           <Input
             value={props.placeQuery}
@@ -47,10 +34,6 @@ export function HeaderControls(props: {
           />
           <Button
             variant="secondary"
-            style={{
-              backgroundColor: document.documentElement.getAttribute('data-theme') === 'dark' ? '#334155' : '#f1f5f9',
-              color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#f1f5f9' : '#0f172a',
-            }}
             className="w-[76px]"
             onClick={props.onMoveToPlace}
             disabled={!props.isMapReady || props.isPlaceSearching}
@@ -61,11 +44,10 @@ export function HeaderControls(props: {
       </div>
 
       <div className="grid gap-2">
-        <div className={LABEL_CLASS_NAME}>유가 관련 정보</div>
+        <div className={styles.label}>유가 관련 정보</div>
         <div className="grid grid-cols-2 gap-2">
           <select
-            className={SELECT_BASE_CLASS}
-            style={getSelectStyle()}
+            className={styles.selectBase}
             value={props.productCode}
             onChange={(e) => props.setProductCode(e.target.value as ProductCode)}
           >
@@ -77,8 +59,7 @@ export function HeaderControls(props: {
           </select>
 
           <select
-            className={SELECT_BASE_CLASS}
-            style={getSelectStyle()}
+            className={styles.selectBase}
             value={props.radiusMeters}
             onChange={(e) => props.setRadiusMeters(Number(e.target.value))}
           >

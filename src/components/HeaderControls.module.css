@@ -1,0 +1,29 @@
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.selectBase {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-default);
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--bg-header);
+  color: var(--text-primary);
+}
+
+.selectBase:focus-visible {
+  outline: none;
+  ring: 2px;
+  ring-color: rgba(59, 130, 246, 0.35);
+  ring-offset: 2px;
+}
+
+.selectBase option {
+  background: var(--bg-header);
+  color: var(--text-primary);
+}
