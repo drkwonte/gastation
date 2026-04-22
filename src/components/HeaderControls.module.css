@@ -18,9 +18,7 @@
 
 .selectBase:focus-visible {
   outline: none;
-  ring: 2px;
-  ring-color: rgba(59, 130, 246, 0.35);
-  ring-offset: 2px;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
 }
 
 .selectBase option {

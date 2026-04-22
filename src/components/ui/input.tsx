@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { cn } from '../../lib/cn'
+import styles from './input.module.css'
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement>
 
@@ -7,17 +8,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
   { className, ...props },
   ref,
 ) {
-  return (
-    <input
-      ref={ref}
-      className={cn(
-        'h-10 w-full rounded-xl border px-3 text-sm font-medium leading-none',
-        'bg-[var(--bg-header)] border-[var(--border-default)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)]',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/35 focus-visible:ring-offset-2',
-        className,
-      )}
-      {...props}
-    />
-  )
+  return <input ref={ref} className={cn(styles.input, className)} {...props} />
 })
 
